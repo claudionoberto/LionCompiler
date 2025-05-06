@@ -87,22 +87,34 @@ if idade >= 18 then {
 
 ### Gerar Analisadores com ANTLR
 ```bash
-antlr4 -Dlanguage=Python3 -visitor -o parser Expr.g4
+java -jar C:\antlr\antlr-4.13.1-complete.jar -Dlanguage=Python3 Expr.g4
 ```
 
-### Executar Analisador
-Implemente um script Python como `main.py` para executar o parser com a gramática gerada.
+### Executar Analisadores
+Para executar o Analisador Léxico:
+```bash
+python AnalisadorLexico.py <arquivo_entrada> <arquivo_saida> [arquivo_log]
+```
+
+Para executar o Analisador Sintático:
+```bash
+python AnalisadorSintatico.py <arquivo_entrada> <arquivo_saida_sem_extensao>
+```
+Gerar o arquivo .png através do .dot:
+```bash
+dot -Tpng <arquivo_entrada>.dot -o <arquivo_saida>.png  
+```
 
 ### Tratamento de Erros
 
 #### Erros Léxicos
 ```text
-line X:Y token recognition error at: 'Z'
+ERRO LÉXICO [Linha 5, Coluna 12]: Símbolo '#' inválido .
 ```
 
 #### Erros Sintáticos
 ```text
-ERRO SINTÁTICO na linha X, coluna Y: encontrado 'Z', esperado '...'
+ERRO SINTÁTICO [Linha 8, Coluna 3]: Esperado ';', encontrado '}' .
 ```
 
 ## Estrutura de Pastas
