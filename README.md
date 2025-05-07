@@ -81,13 +81,13 @@ if idade >= 18 then {
 
 ### Requisitos
 - Python 3.x
-- ANTLR 4.13.1
+- ANTLR 4.13.2
 - Java (para gerar analisadores)
 - `antlr4-python3-runtime` (instalável via pip)
 
 ### Gerar Analisadores com ANTLR
 ```bash
-java -jar C:\antlr\antlr-4.13.1-complete.jar -Dlanguage=Python3 Expr.g4
+java -jar C:\antlr\antlr-4.13.2-complete.jar -Dlanguage=Python3 Expr.g4
 ```
 
 ### Executar Analisadores
@@ -120,10 +120,19 @@ ERRO SINTÁTICO [Linha 8, Coluna 3]: Esperado ';', encontrado '}' .
 ## Estrutura de Pastas
 ```
 Lion/
-├── parser/              # Arquivos gerados pelo ANTLR
-├── examples/            # Exemplos de programas em Lion (.lion)
+├── Expr.interp              # Arquivos gerados pelo ANTLR
+├── Expr.tokens             # Arquivos gerados pelo ANTLR
+├── ExprLexer.interp              # Arquivos gerados pelo ANTLR
+├── ExprLexer.interp              # Arquivos gerados pelo ANTLR
+├── ExprLexer.py             # Arquivos gerados pelo ANTLR
+├── ExprLexer.tokens              # Arquivos gerados pelo ANTLR
+├── ExprListener.py              # Arquivos gerados pelo ANTLR
+├── ExprParser.py              # Arquivos gerados pelo ANTLR
+├── TrianguloPascal.lion           # Exemplos de programas em Lion (.lion)
+├── ClassTriangulos.lion           # Exemplos de programas em Lion (.lion)
 ├── Expr.g4              # Arquivo de gramática
-├── main.py              # Código principal de execução
+├── AnalisadorLexico.py              # Código principal de execução
+├── AnalisadorSintatico.py              # Código principal de execução
 └── README.md            # Este documento
 ```
 
