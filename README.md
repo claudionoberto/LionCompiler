@@ -1,6 +1,7 @@
+
 # Lion
 
-Lion é uma linguagem de programação educacional desenvolvida para a disciplina de Compiladores. O projeto implementa o analisador léxico e sintático utilizando ANTLR4 com suporte à execução em Python.
+Lion é uma linguagem de programação educacional desenvolvida para a disciplina de Compiladores. O projeto implementa o analisador léxico, sintático e semântico utilizando ANTLR4 com suporte à execução em Python.
 
 ## Características da Linguagem
 
@@ -18,6 +19,7 @@ Lion é uma linguagem de programação educacional desenvolvida para a disciplin
 - `while`, `strike` : Estrutura de repetição
 
 ### Operadores
+
 #### Aritméticos
 - `+`, `-`, `*`, `/`
 
@@ -91,49 +93,79 @@ java -jar C:\antlr\antlr-4.13.2-complete.jar -Dlanguage=Python3 Expr.g4
 ```
 
 ### Executar Analisadores
-Para executar o Analisador Léxico:
+
+#### Analisador Léxico
 ```bash
 python AnalisadorLexico.py <arquivo_entrada> <arquivo_saida> [arquivo_log]
 ```
 
-Para executar o Analisador Sintático:
+#### Analisador Sintático
 ```bash
 python AnalisadorSintatico.py <arquivo_entrada> <arquivo_saida_sem_extensao>
 ```
-Gerar o arquivo .png através do .dot:
+
+Para gerar o arquivo .png a partir do .dot:
 ```bash
 dot -Tpng <arquivo_entrada>.dot -o <arquivo_saida>.png  
 ```
+
+#### Analisador Semântico
+```bash
+python AnalisadorSemantico.py <arquivo_entrada> <arquivo_log>
+```
+
+O analisador semântico realiza a verificação de declarações e atribuições, gerando um log das operações em um arquivo `.txt` e reportando no terminal os erros semânticos encontrados. Análise semântica foi feita baseada em visita recursiva à árvore sintática.
 
 ### Tratamento de Erros
 
 #### Erros Léxicos
 ```text
-ERRO LÉXICO [Linha 5, Coluna 12]: Símbolo '#' inválido .
+ERRO LÉXICO [Linha 5, Coluna 12]: Símbolo '#' inválido.
 ```
 
 #### Erros Sintáticos
 ```text
-ERRO SINTÁTICO [Linha 8, Coluna 3]: Esperado ';', encontrado '}' .
+ERRO SINTÁTICO [Linha 8, Coluna 3]: Esperado ';', encontrado '}'.
+```
+
+#### Erros Semânticos
+Os erros semânticos são reportados no terminal após a execução do analisador semântico:
+
+```text
+Erros semânticos encontrados:
+Erro: variável 'x' já declarada.
+Erro: variável 'y' não declarada.
+```
+
+### Exemplo de Logs do Analisador Semântico
+
+O log é salvo no arquivo especificado e inclui informações como:
+
+```text
+[LOG] Visitando nó: ProgramContext
+[LOG] Visitando nó: DeclarationsContext
+[LOG] Declarando variável 'x' do tipo 'int'
+[ERRO] Erro: variável 'x' já declarada.
 ```
 
 ## Estrutura de Pastas
+
 ```
 Lion/
 ├── Expr.interp              # Arquivos gerados pelo ANTLR
-├── Expr.tokens             # Arquivos gerados pelo ANTLR
-├── ExprLexer.interp              # Arquivos gerados pelo ANTLR
-├── ExprLexer.interp              # Arquivos gerados pelo ANTLR
+├── Expr.tokens              # Arquivos gerados pelo ANTLR
+├── ExprLexer.interp         # Arquivos gerados pelo ANTLR
+├── ExprLexer.tokens         # Arquivos gerados pelo ANTLR
 ├── ExprLexer.py             # Arquivos gerados pelo ANTLR
-├── ExprLexer.tokens              # Arquivos gerados pelo ANTLR
-├── ExprListener.py              # Arquivos gerados pelo ANTLR
-├── ExprParser.py              # Arquivos gerados pelo ANTLR
-├── TrianguloPascal.lion           # Exemplos de programas em Lion (.lion)
-├── ClassTriangulos.lion           # Exemplos de programas em Lion (.lion)
-├── Expr.g4              # Arquivo de gramática
-├── AnalisadorLexico.py              # Código principal de execução
-├── AnalisadorSintatico.py              # Código principal de execução
-└── README.md            # Este documento
+├── ExprListener.py          # Arquivos gerados pelo ANTLR
+├── ExprParser.py            # Arquivos gerados pelo ANTLR
+├── TrianguloPascal.lion     # Exemplos de programas em Lion (.lion)
+├── ClassTriangulos.lion     # Exemplos de programas em Lion (.lion)
+├── Expr.g4                  # Arquivo de gramática
+├── AnalisadorLexico.py      # Código principal de execução
+├── AnalisadorSintatico.py   # Código principal de execução
+├── AnalisadorSemantico.py   # Código principal de execução
+└── README.md                # Este documento
 ```
 
 ## Autores
