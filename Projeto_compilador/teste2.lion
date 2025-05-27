@@ -1,0 +1,7 @@
+@start
+
+roar x as int;
+roar x as text;
+
+y = 5;
+@end
