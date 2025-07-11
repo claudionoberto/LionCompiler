@@ -1,4 +1,4 @@
-
+Grupo: Claudio Noberto e Khawan Fellipe
 # Lion
 
 Lion é uma linguagem de programação educacional desenvolvida para a disciplina de Compiladores. O projeto implementa o analisador léxico, sintático e semântico utilizando ANTLR4 com suporte à execução em Python.
