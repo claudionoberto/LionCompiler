@@ -1,0 +1,33 @@
+@start
+    roar n as int;
+    roar i as int;
+    roar j as int;
+    roar c as int;
+
+    hunt(n);
+
+    if n <= 0 then {
+        roarout("Erro: numero deve ser maior que zero");
+        roarout("\n");
+    } else {
+        i = 0;
+        while i < n strike {
+            c = 1;
+            j = 0;
+            
+            while j <= i strike {
+                roarout(c);
+                
+                if j < i then {
+                    roarout(" ");
+                }
+                
+                c = c * (i - j) / (j + 1);
+                j = j + 1;
+            }
+            
+            roarout("\n");
+            i = i + 1;
+        }
+    }
+@end

@@ -1,0 +1,17 @@
+@start
+    roar x as int;
+    roar y as int;
+    roar z as int;
+
+    x = 10;
+    hunt(y);
+
+    if (y > 5) then {
+        z = x * y + 2;
+    } else {
+        z = x - y;
+    }
+
+    roarout(z);
+@end
+

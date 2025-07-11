@@ -1,0 +1,64 @@
+[LOG] Visitando nó: ProgramContext
+[LOG] Visitando nó: DeclarationsContext
+[LOG] Visitando nó: DeclarationContext
+[LOG] Visitando nó: VariableDeclarationContext
+[LOG] Declarando variável 'x' do tipo 'int'
+[LOG] Visitando nó: TypeContext
+[LOG] Visitando nó: DeclarationContext
+[LOG] Visitando nó: VariableDeclarationContext
+[LOG] Declarando variável 'y' do tipo 'int'
+[LOG] Visitando nó: TypeContext
+[LOG] Visitando nó: DeclarationContext
+[LOG] Visitando nó: VariableDeclarationContext
+[LOG] Declarando variável 'z' do tipo 'int'
+[LOG] Visitando nó: TypeContext
+[LOG] Visitando nó: DeclarationContext
+[LOG] Visitando nó: CommandContext
+[LOG] Visitando nó: AssignmentContext
+[LOG] Atribuindo valor à variável 'x'
+[LOG] Avaliando expressão: ArithExprContext
+[LOG] Avaliando expressão aritmética
+[LOG] Visitando nó: DeclarationContext
+[LOG] Visitando nó: CommandContext
+[LOG] Visitando nó: InputCommandContext
+[LOG] Visitando nó: DeclarationContext
+[LOG] Visitando nó: CommandContext
+[LOG] Visitando nó: IfCommandContext
+[LOG] Visitando nó: LogicExprContext
+[LOG] Visitando nó: LogicalExpressionContext
+[LOG] Visitando nó: LogicalTermContext
+[LOG] Visitando nó: LogicalFactorContext
+[LOG] Visitando nó: LogicalExpressionContext
+[LOG] Visitando nó: LogicalTermContext
+[LOG] Visitando nó: LogicalFactorContext
+[LOG] Visitando nó: ComparisonContext
+[LOG] Visitando nó: ArithmeticExpressionContext
+[LOG] Visitando nó: TermContext
+[LOG] Visitando nó: FactorContext
+[LOG] Visitando nó: ComparisonOperatorContext
+[LOG] Visitando nó: ArithmeticExpressionContext
+[LOG] Visitando nó: TermContext
+[LOG] Visitando nó: FactorContext
+[LOG] Visitando nó: BlockContext
+[LOG] Visitando nó: DeclarationsContext
+[LOG] Visitando nó: DeclarationContext
+[LOG] Visitando nó: CommandContext
+[LOG] Visitando nó: AssignmentContext
+[LOG] Atribuindo valor à variável 'z'
+[LOG] Avaliando expressão: ArithExprContext
+[LOG] Avaliando expressão aritmética
+[LOG] Visitando nó: BlockContext
+[LOG] Visitando nó: DeclarationsContext
+[LOG] Visitando nó: DeclarationContext
+[LOG] Visitando nó: CommandContext
+[LOG] Visitando nó: AssignmentContext
+[LOG] Atribuindo valor à variável 'z'
+[LOG] Avaliando expressão: ArithExprContext
+[LOG] Avaliando expressão aritmética
+[LOG] Visitando nó: DeclarationContext
+[LOG] Visitando nó: CommandContext
+[LOG] Visitando nó: OutputCommandContext
+[LOG] Visitando nó: ArithExprContext
+[LOG] Visitando nó: ArithmeticExpressionContext
+[LOG] Visitando nó: TermContext
+[LOG] Visitando nó: FactorContext

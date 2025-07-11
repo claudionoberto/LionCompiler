@@ -1,8 +1,0 @@
-@start
-
-roar x as int;
-roar y as text;
-
-x = "texto errado";
-@end
-
